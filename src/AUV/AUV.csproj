@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <AssemblyName>AUV.Core</AssemblyName>
+    <RootNamespace>AUV</RootNamespace>
+    <PackageId>AUV</PackageId>
+    <Authors>周大侠</Authors>
+    <Company>Williamsoft</Company>
+    <Description>for framework standard design and specification</Description>
+    <Product>AUV.Core</Product>
+    <Copyright>Williamsoft © 周大侠 2017</Copyright>
+    <PackageTags>design specification</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.1\AUV.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.1\AUV.Core.xml</DocumentationFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>False</DebugSymbols>
+  </PropertyGroup>
+
+</Project>
