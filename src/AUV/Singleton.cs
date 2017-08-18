@@ -6,7 +6,7 @@ namespace AUV
     /// 为指定的实例创建有线程安全的单例模式。实例必须有一个公开的，无参数的构造方法，并且能正确的被实例化。
     /// </summary>
     /// <remarks>有关单例模式请参见 https://www.codeproject.com/kb/architecture/genericsingletonpattern.aspx </remarks>
-    /// <typeparam name="T">单例的实例。</typeparam>
+    /// <typeparam name="T">作为单例的对象。</typeparam>
     public static class Singleton<T>
        where T : class
     {
