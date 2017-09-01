@@ -94,6 +94,12 @@ namespace AUV
         }
 
         /// <summary>
+        /// 初始化 <see cref="ApplicationResult{T}"/> 类的新实例。
+        /// </summary>
+        /// <param name="success">表示应用程序执行的结果是否成功。</param>
+        protected ApplicationResult(bool success) : base(success) { }
+
+        /// <summary>
         /// 获取一个泛型的值，表示应用程序成功或失败时所需要的任意数据值。
         /// </summary>
         /// <value>
@@ -106,7 +112,16 @@ namespace AUV
         /// </summary>
         /// <param name="data">要设置的数据。</param>
         /// <returns><see cref="ApplicationResult{T}"/> 实例。</returns>
-        public static ApplicationResult SetData(T data)
-            => new ApplicationResult<T>(data);
+        public ApplicationResult<T> SetData(T data)
+        {
+            this.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// 表示当前操作执行成功。
+        /// </summary>
+        /// <returns><see cref="ApplicationResult{T}"/> 实例。</returns>
+        public static new ApplicationResult<T> Success => new ApplicationResult<T>(true);
     }
 }

@@ -7,11 +7,18 @@
     <PackageId>AUV</PackageId>
     <Authors>周大侠</Authors>
     <Company>Williamsoft</Company>
-    <Description>for framework standard design and specification</Description>
+    <Description>for framework standard design and specification
+为框架的标准设计而产生。</Description>
     <Product>AUV.Core</Product>
     <Copyright>Williamsoft © 周大侠 2017</Copyright>
     <PackageTags>design specification</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <RepositoryUrl>https://github.com/Williamsoft520/AUV</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageReleaseNotes>[fix]ApplicationResult&lt;T&gt;</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/Williamsoft520/AUV</PackageProjectUrl>
+    <PackageIconUrl>https://www.easyicon.net/api/resizeApi.php?id=1203601&amp;size=48</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
