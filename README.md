@@ -15,8 +15,9 @@ It is a standard definition,designs or specifications to supply other providers 
 * .NET Standard 1.1+
 * .NET Core 1.1+
 
+**please see [Wiki](https://github.com/Williamsoft520/AUV/wiki) to quick start.**
 
-
+**查看[Wiki](https://github.com/Williamsoft520/AUV/wiki)快速开始**
 
 ## Offen Instance(常用实例)
 
