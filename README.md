@@ -1,58 +1,44 @@
 ## AUV
 It is a standard definition,designs or specifications to supply other providers . It is small and no other dependencies, and always support the lowest framework.
 
-## Install from nuget
+定义各种其他提供引擎的基本接口和设计，可以下载其他组件进行最终实现。通过最小接口和设计，可以很容易的更换实现。
+
+## Install From Nuget（从 Nuget 进行安装）
 >Install-Package auv
 
-## Latest Version 1.0.0
+## Latest Version 1.0.1（最新版本）
+* [fix] ApplicationResult&lt;T> that cannot invode method properly;
+* [修复]ApplicationResult&lt;T> 无法正确调用问题；
 
-## Platform Support
+****
 * .NET Framework 4.5+
 * .NET Standard 1.1+
 * .NET Core 1.1+
 
 
-## Documentation
+
+
+## Offen Instance(常用实例)
 
 ### Singleton&lt;T>
 > T is a class that want to be a singleton instance.
 
-#### CreateInstance()
+> T 是需要进行单例模式的实例类型。 
+
+**CreateInstance()**
 
 Create a singleton instance from T with safety threading.
-****
-### DisposableHandler
->It is an abstract class to handle the disposable pattern to implament by IDisposable. To know [disposable pattern](https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.110).aspx).
 
+创建一个具有线程安全的单例实例。
 
-#### DisposeHandler()
-It is an abstract method to release unmanage resource by client that had inherited.
-
-#### HasDisposed
-It is a property to know current object had been disposed or not.
+    Singleton<Class>.CreateInstance();
 
 ****
 ### ApplicationResult
 >To represent a result of execution after method invoke with custom errors
 
-#### Succeeded
-To represent current execution had been successed or failed.
-
-#### Errors
-To represent the errors from failed result.
-
-#### Success()
-To represent current execution is successed.It is a static method
-
-    return ApplicationResult.Success();
-
-#### Failed(params string[] errors), Failed(IEnumerable<string> errors)
-To represent current execution is failed, and should have some errors.
-
-    return ApplicationResult.Failed();
-    return ApplicationResult.Failed("there is an error");
-    return ApplicationResult.Failed("there is an error","there is another error");
-    
+> 用于表示一个操作结果
+> 
 #### Example
 
     public static ApplicationResult ToDo()
@@ -64,9 +50,9 @@ To represent current execution is failed, and should have some errors.
         return Application.Success();
     }
     
-    //in client
+    //in client 调用时
     var result = Class1.ToDo();
     if(!result.IsSucceed)
     {
-        //get result.Errors
+        // result.Errors
     }
